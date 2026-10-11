@@ -27,29 +27,48 @@
     }
   </script>
 </head>
-<body class="bg-black text-neutral-100 font-sans antialiased selection:bg-white selection:text-black min-h-screen">
+<body class="bg-neutral-50 dark:bg-black text-neutral-900 dark:text-neutral-100 font-sans antialiased selection:bg-neutral-900 selection:text-white dark:selection:bg-white dark:selection:text-black min-h-screen transition-colors duration-200">
 
-  <!-- ================= TOP NAVIGATION BAR (3 TABS) ================= -->
-  <nav class="sticky top-0 z-50 w-full border-b border-neutral-900 bg-black/80 backdrop-blur-md">
+  <!-- ================= TOP NAVIGATION BAR (3 TABS + THEME TOGGLE) ================= -->
+  <nav class="sticky top-0 z-50 w-full border-b border-neutral-200 dark:border-neutral-900 bg-white/80 dark:bg-black/80 backdrop-blur-md transition-colors duration-200">
     <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
       
-      <!-- Brand / Logo -->
+      <!-- Circular Logo & dnarxus.dev -->
       <a href="#me" class="flex items-center gap-3 group">
-        <img 
-          src="assets/Dnarxus.png" 
-          alt="Dnarxus Logo" 
-          class="w-7 h-7 object-contain rounded filter brightness-110" 
-        />
-        <span class="font-mono text-sm font-semibold tracking-wider text-white group-hover:text-neutral-400 transition">
-          dion<span class="text-neutral-600">.dev</span>
+        <div class="w-8 h-8 rounded-full overflow-hidden border border-neutral-300 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 flex items-center justify-center p-0.5 shadow-sm">
+          <img 
+            src="assets/Dnarxus.png" 
+            alt="Dnarxus Logo" 
+            class="w-full h-full object-cover rounded-full" 
+          />
+        </div>
+        <span class="font-mono text-sm font-semibold tracking-wider text-neutral-900 dark:text-white group-hover:text-neutral-500 dark:group-hover:text-neutral-400 transition">
+          dnarxus<span class="text-neutral-400 dark:text-neutral-600">.dev</span>
         </span>
       </a>
 
-      <!-- 3 Primary Navigation Links -->
-      <div class="flex items-center gap-6 sm:gap-8 font-mono text-xs">
-        <a href="#me" class="text-neutral-400 hover:text-white transition">Me</a>
-        <a href="#projects" class="text-neutral-400 hover:text-white transition">Projects</a>
-        <a href="#credentials" class="text-neutral-400 hover:text-white transition">Credentials</a>
+      <!-- Navigation Links & Theme Button -->
+      <div class="flex items-center gap-4 sm:gap-7 font-mono text-xs">
+        <a href="#me" class="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition">Me</a>
+        <a href="#projects" class="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition">Projects</a>
+        <a href="#credentials" class="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition">Credentials</a>
+
+        <!-- Light / Dark Toggle Button -->
+        <button 
+          id="theme-toggle" 
+          type="button" 
+          aria-label="Toggle Theme"
+          class="p-2 rounded-lg border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-900 transition"
+        >
+          <!-- Sun Icon (shows in Dark Mode) -->
+          <svg id="theme-toggle-light-icon" class="hidden w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+          </svg>
+          <!-- Moon Icon (shows in Light Mode) -->
+          <svg id="theme-toggle-dark-icon" class="hidden w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+        </button>
       </div>
 
     </div>
@@ -60,32 +79,32 @@
 
     <!-- 1. ME SECTION -->
     <section id="me" class="scroll-mt-24 space-y-6">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono border border-neutral-800 text-neutral-400 bg-neutral-950">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 bg-white dark:bg-neutral-950 shadow-sm">
         <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
         Available for Engineering & Software Roles
       </div>
       
       <div class="space-y-1">
-        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-tight">
           Dionivel Adem Alegado
         </h1>
-        <p class="text-xs sm:text-sm font-mono uppercase tracking-widest text-neutral-400">
+        <p class="text-xs sm:text-sm font-mono uppercase tracking-widest text-neutral-500 dark:text-neutral-400">
           Computer Engineering Graduate
         </p>
       </div>
 
-      <p class="text-neutral-400 text-base sm:text-lg max-w-2xl leading-relaxed">
+      <p class="text-neutral-600 dark:text-neutral-400 text-base sm:text-lg max-w-2xl leading-relaxed">
         Computer engineering graduate with a focus on network engineering, technical documentation, and IT systems support. Proficient in hardware electronics and modern web/mobile software development, leveraging AI-assisted engineering tools like Google Gemini to build responsive, reliable solutions.
       </p>
 
       <div class="flex flex-wrap gap-3 pt-2 font-mono text-xs">
-        <a href="#projects" class="px-4 py-2 bg-white text-black font-semibold rounded hover:bg-neutral-200 transition">
+        <a href="#projects" class="px-4 py-2 bg-neutral-900 text-white dark:bg-white dark:text-black font-semibold rounded hover:bg-neutral-700 dark:hover:bg-neutral-200 transition">
           View Projects ↓
         </a>
-        <a href="https://github.com/Dnarxus" target="_blank" rel="noopener noreferrer" class="px-4 py-2 border border-neutral-800 rounded text-neutral-300 hover:border-neutral-500 transition">
+        <a href="https://github.com/Dnarxus" target="_blank" rel="noopener noreferrer" class="px-4 py-2 border border-neutral-300 dark:border-neutral-800 rounded text-neutral-700 dark:text-neutral-300 hover:border-neutral-500 transition">
           GitHub Profile ↗
         </a>
-        <a href="mailto:rizalalegadodion@gmail.com" class="px-4 py-2 border border-neutral-800 rounded text-neutral-300 hover:border-neutral-500 transition">
+        <a href="mailto:rizalalegadodion@gmail.com" class="px-4 py-2 border border-neutral-300 dark:border-neutral-800 rounded text-neutral-700 dark:text-neutral-300 hover:border-neutral-500 transition">
           Contact ↗
         </a>
       </div>
@@ -93,97 +112,97 @@
 
     <!-- 2. PROJECTS SECTION -->
     <section id="projects" class="scroll-mt-24 space-y-8">
-      <div class="flex items-center justify-between border-b border-neutral-900 pb-3">
+      <div class="flex items-center justify-between border-b border-neutral-200 dark:border-neutral-900 pb-3">
         <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-500">Selected Works</h2>
-        <span class="text-xs font-mono text-neutral-600">Hardware, Mobile & Web</span>
+        <span class="text-xs font-mono text-neutral-500 dark:text-neutral-600">Hardware, Mobile & Web</span>
       </div>
 
       <div class="space-y-6">
 
         <!-- Project 1: SENTINEL -->
-        <article class="p-6 sm:p-8 bg-neutral-950 border border-neutral-900 rounded-xl hover:border-neutral-700 transition duration-200 space-y-5">
+        <article class="p-6 sm:p-8 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-900 rounded-xl hover:border-neutral-400 dark:hover:border-neutral-700 transition duration-200 space-y-5 shadow-sm">
           <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
             <div>
               <div class="flex items-center gap-3">
-                <h3 class="text-xl font-bold text-white tracking-tight">SENTINEL</h3>
-                <span class="text-xs font-mono px-2 py-0.5 border border-neutral-800 text-neutral-400 rounded">
+                <h3 class="text-xl font-bold text-neutral-900 dark:text-white tracking-tight">SENTINEL</h3>
+                <span class="text-xs font-mono px-2 py-0.5 border border-neutral-300 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 rounded">
                   Embedded & IoT
                 </span>
               </div>
-              <p class="text-neutral-400 text-sm mt-2 leading-relaxed">
+              <p class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-relaxed">
                 An active-resistance smart backpack engineered with integrated physical and digital security controls. Features a conductive mesh matrix to detect physical tampering and slash breaches, a fingerprint scanner to enforce authorized access, and onboard GPS with dedicated Wi-Fi telemetry to transmit real-time location tracking and instant intrusion alerts to a companion mobile application.
               </p>
             </div>
           </div>
 
-          <div class="flex flex-wrap gap-2 text-xs font-mono text-neutral-400">
-            <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Embedded C/C++</span>
-            <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">IoT & Telemetry</span>
-            <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Biometrics</span>
-            <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">GPS / Wi-Fi</span>
-            <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Mobile Integration</span>
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-neutral-600 dark:text-neutral-400">
+            <span class="px-2 py-1 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded">Embedded C/C++</span>
+            <span class="px-2 py-1 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded">IoT & Telemetry</span>
+            <span class="px-2 py-1 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded">Biometrics</span>
+            <span class="px-2 py-1 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded">GPS / Wi-Fi</span>
+            <span class="px-2 py-1 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded">Mobile Integration</span>
           </div>
         </article>
 
         <!-- Project 2: DoNWrite Ultra -->
-        <article class="p-6 sm:p-8 bg-neutral-950 border border-neutral-900 rounded-xl hover:border-neutral-700 transition duration-200 space-y-5">
+        <article class="p-6 sm:p-8 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-900 rounded-xl hover:border-neutral-400 dark:hover:border-neutral-700 transition duration-200 space-y-5 shadow-sm">
           <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
             <div>
               <div class="flex items-center gap-3">
-                <h3 class="text-xl font-bold text-white tracking-tight">DoNWrite Ultra</h3>
-                <span class="text-xs font-mono px-2 py-0.5 border border-neutral-800 text-neutral-400 rounded">
+                <h3 class="text-xl font-bold text-neutral-900 dark:text-white tracking-tight">DoNWrite Ultra</h3>
+                <span class="text-xs font-mono px-2 py-0.5 border border-neutral-300 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 rounded">
                   v2.1.0
                 </span>
               </div>
-              <p class="text-neutral-400 text-sm mt-2 leading-relaxed">
+              <p class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-relaxed">
                 Offline-first studio and worldbuilding platform. Features custom hierarchical template engines, local SQLite persistence, interactive maps, prioritized search relevancy, and lore-compiled PDF publishing.
               </p>
             </div>
           </div>
 
-          <div class="flex flex-wrap gap-2 text-xs font-mono text-neutral-400">
-            <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Flutter</span>
-            <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Dart</span>
-            <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">SQLite</span>
-            <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">JSON Serialization</span>
-            <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Document Pipeline</span>
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-neutral-600 dark:text-neutral-400">
+            <span class="px-2 py-1 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded">Flutter</span>
+            <span class="px-2 py-1 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded">Dart</span>
+            <span class="px-2 py-1 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded">SQLite</span>
+            <span class="px-2 py-1 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded">JSON Serialization</span>
+            <span class="px-2 py-1 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded">Document Pipeline</span>
           </div>
 
-          <div class="pt-2 flex flex-wrap gap-4 text-xs font-mono border-t border-neutral-900">
-            <a href="https://github.com/Dnarxus/donwrite_ultra" target="_blank" rel="noopener noreferrer" class="text-white hover:underline">
+          <div class="pt-2 flex flex-wrap gap-4 text-xs font-mono border-t border-neutral-200 dark:border-neutral-900">
+            <a href="https://github.com/Dnarxus/donwrite_ultra" target="_blank" rel="noopener noreferrer" class="text-neutral-900 dark:text-white font-semibold hover:underline">
               View Repository ↗
             </a>
-            <a href="https://github.com/Dnarxus/donwrite_ultra/releases" target="_blank" rel="noopener noreferrer" class="text-neutral-400 hover:text-white transition">
+            <a href="https://github.com/Dnarxus/donwrite_ultra/releases" target="_blank" rel="noopener noreferrer" class="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition">
               Download Releases (APKs) ↗
             </a>
           </div>
         </article>
 
         <!-- Project 3: Sertnisko -->
-        <article class="p-6 sm:p-8 bg-neutral-950 border border-neutral-900 rounded-xl hover:border-neutral-700 transition duration-200 space-y-5">
+        <article class="p-6 sm:p-8 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-900 rounded-xl hover:border-neutral-400 dark:hover:border-neutral-700 transition duration-200 space-y-5 shadow-sm">
           <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
             <div>
               <div class="flex items-center gap-3">
-                <h3 class="text-xl font-bold text-white tracking-tight">Sertnisko</h3>
-                <span class="text-xs font-mono px-2 py-0.5 border border-neutral-800 text-neutral-400 rounded">
+                <h3 class="text-xl font-bold text-neutral-900 dark:text-white tracking-tight">Sertnisko</h3>
+                <span class="text-xs font-mono px-2 py-0.5 border border-neutral-300 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 rounded">
                   Live Platform
                 </span>
               </div>
-              <p class="text-neutral-400 text-sm mt-2 leading-relaxed">
+              <p class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-relaxed">
                 A centralized web platform designed to streamline PUP student event participation and credential issuance. Students register for activities, submit evaluations, and obtain verified digital certificates, while organizers leverage an administrative dashboard to manage events, build custom surveys, view live participation analytics, and automate credential delivery.
               </p>
             </div>
           </div>
 
-          <div class="flex flex-wrap gap-2 text-xs font-mono text-neutral-400">
-            <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Web Platform</span>
-            <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Credential Automation</span>
-            <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Analytics Dashboard</span>
-            <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Cloud Hosting</span>
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-neutral-600 dark:text-neutral-400">
+            <span class="px-2 py-1 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded">Web Platform</span>
+            <span class="px-2 py-1 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded">Credential Automation</span>
+            <span class="px-2 py-1 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded">Analytics Dashboard</span>
+            <span class="px-2 py-1 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded">Cloud Hosting</span>
           </div>
 
-          <div class="pt-2 flex flex-wrap gap-4 text-xs font-mono border-t border-neutral-900">
-            <a href="https://sertniisko-pup.onrender.com" target="_blank" rel="noopener noreferrer" class="text-white hover:underline">
+          <div class="pt-2 flex flex-wrap gap-4 text-xs font-mono border-t border-neutral-200 dark:border-neutral-900">
+            <a href="https://sertniisko-pup.onrender.com" target="_blank" rel="noopener noreferrer" class="text-neutral-900 dark:text-white font-semibold hover:underline">
               Visit Live Platform ↗
             </a>
           </div>
@@ -194,70 +213,70 @@
 
     <!-- 3. CREDENTIALS SECTION (STUDIES + CERTIFICATIONS COMBINED) -->
     <section id="credentials" class="scroll-mt-24 space-y-8">
-      <div class="flex items-center justify-between border-b border-neutral-900 pb-3">
+      <div class="flex items-center justify-between border-b border-neutral-200 dark:border-neutral-900 pb-3">
         <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-500">Academic & Verified Credentials</h2>
-        <span class="text-xs font-mono text-neutral-600">Background</span>
+        <span class="text-xs font-mono text-neutral-500 dark:text-neutral-600">Background</span>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
         
         <!-- Sub-panel: Education -->
-        <div class="p-6 bg-neutral-950 border border-neutral-900 rounded-xl space-y-4">
-          <div class="flex items-center justify-between border-b border-neutral-900 pb-2">
+        <div class="p-6 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-900 rounded-xl space-y-4 shadow-sm">
+          <div class="flex items-center justify-between border-b border-neutral-200 dark:border-neutral-900 pb-2">
             <span class="text-xs font-mono text-neutral-500 uppercase tracking-wider">Education</span>
-            <span class="text-xs font-mono text-neutral-600">Class of 2026</span>
+            <span class="text-xs font-mono text-neutral-500 dark:text-neutral-600">Class of 2026</span>
           </div>
           
           <div>
-            <h3 class="text-base font-bold text-white">Bachelor of Science in Computer Engineering</h3>
+            <h3 class="text-base font-bold text-neutral-900 dark:text-white">Bachelor of Science in Computer Engineering</h3>
             <p class="text-neutral-500 text-xs font-mono mt-0.5">Engineering Core Curriculum</p>
           </div>
 
-          <p class="text-neutral-400 text-sm leading-relaxed">
+          <p class="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed">
             Key coursework: Data Structures & Algorithms, Database Systems, Computer Architecture, Digital Design, Networks, and Software Engineering.
           </p>
 
-          <div class="pt-2 flex flex-wrap gap-2 text-xs font-mono text-neutral-400">
-            <span class="px-2 py-0.5 bg-neutral-900 border border-neutral-800 rounded">Hardware Logic</span>
-            <span class="px-2 py-0.5 bg-neutral-900 border border-neutral-800 rounded">Algorithms</span>
-            <span class="px-2 py-0.5 bg-neutral-900 border border-neutral-800 rounded">Systems Architecture</span>
-            <span class="px-2 py-0.5 bg-neutral-900 border border-neutral-800 rounded">Networks</span>
+          <div class="pt-2 flex flex-wrap gap-2 text-xs font-mono text-neutral-600 dark:text-neutral-400">
+            <span class="px-2 py-0.5 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded">Hardware Logic</span>
+            <span class="px-2 py-0.5 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded">Algorithms</span>
+            <span class="px-2 py-0.5 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded">Systems Architecture</span>
+            <span class="px-2 py-0.5 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded">Networks</span>
           </div>
         </div>
 
         <!-- Sub-panel: Certifications -->
-        <div class="p-6 bg-neutral-950 border border-neutral-900 rounded-xl space-y-4">
-          <div class="flex items-center justify-between border-b border-neutral-900 pb-2">
+        <div class="p-6 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-900 rounded-xl space-y-4 shadow-sm">
+          <div class="flex items-center justify-between border-b border-neutral-200 dark:border-neutral-900 pb-2">
             <span class="text-xs font-mono text-neutral-500 uppercase tracking-wider">Certifications</span>
-            <span class="text-xs font-mono text-neutral-600">Verified Badges</span>
+            <span class="text-xs font-mono text-neutral-500 dark:text-neutral-600">Verified Badges</span>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
             
-            <!-- Cisco CCNA: Enterprise Networking, Security, & Automation (ENSA) -->
+            <!-- Cisco CCNA: ENSA -->
             <a 
               href="assets/certifications/ENSA.png" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="group p-3 rounded-lg border border-neutral-900 bg-black/50 hover:border-neutral-700 transition flex items-center gap-3"
+              class="group p-3 rounded-lg border border-neutral-200 dark:border-neutral-900 bg-neutral-50/50 dark:bg-black/50 hover:border-neutral-400 dark:hover:border-neutral-700 transition flex items-center gap-3"
             >
-              <img src="assets/certifications/ENSA.png" alt="Cisco ENSA" class="w-10 h-10 object-contain rounded bg-neutral-900 p-1 shrink-0" />
+              <img src="assets/certifications/ENSA.png" alt="Cisco ENSA" class="w-10 h-10 object-contain rounded bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-1 shrink-0" />
               <div class="min-w-0">
-                <h4 class="text-xs font-bold text-white group-hover:underline truncate">CCNA: Enterprise Networking, Security, & Automation</h4>
+                <h4 class="text-xs font-bold text-neutral-900 dark:text-white group-hover:underline truncate">CCNA: ENSA</h4>
                 <p class="text-[10px] font-mono text-neutral-500">Cisco Academy</p>
               </div>
             </a>
 
-            <!-- Cisco CCNA: Switching, Routing, and Wireless Essentials (SRWE) -->
+            <!-- Cisco CCNA: SRWE -->
             <a 
               href="assets/certifications/SRWE.png" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="group p-3 rounded-lg border border-neutral-900 bg-black/50 hover:border-neutral-700 transition flex items-center gap-3"
+              class="group p-3 rounded-lg border border-neutral-200 dark:border-neutral-900 bg-neutral-50/50 dark:bg-black/50 hover:border-neutral-400 dark:hover:border-neutral-700 transition flex items-center gap-3"
             >
-              <img src="assets/certifications/SRWE.png" alt="Cisco SRWE" class="w-10 h-10 object-contain rounded bg-neutral-900 p-1 shrink-0" />
+              <img src="assets/certifications/SRWE.png" alt="Cisco SRWE" class="w-10 h-10 object-contain rounded bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-1 shrink-0" />
               <div class="min-w-0">
-                <h4 class="text-xs font-bold text-white group-hover:underline truncate">CCNA: Switching, Routing, and Wireless Essentials</h4>
+                <h4 class="text-xs font-bold text-neutral-900 dark:text-white group-hover:underline truncate">CCNA: SRWE</h4>
                 <p class="text-[10px] font-mono text-neutral-500">Cisco Academy</p>
               </div>
             </a>
@@ -267,25 +286,25 @@
               href="assets/certifications/CE.png" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="group p-3 rounded-lg border border-neutral-900 bg-black/50 hover:border-neutral-700 transition flex items-center gap-3"
+              class="group p-3 rounded-lg border border-neutral-200 dark:border-neutral-900 bg-neutral-50/50 dark:bg-black/50 hover:border-neutral-400 dark:hover:border-neutral-700 transition flex items-center gap-3"
             >
-              <img src="assets/certifications/CE.png" alt="Cybersecurity Essentials" class="w-10 h-10 object-contain rounded bg-neutral-900 p-1 shrink-0" />
+              <img src="assets/certifications/CE.png" alt="Cybersecurity Essentials" class="w-10 h-10 object-contain rounded bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-1 shrink-0" />
               <div class="min-w-0">
-                <h4 class="text-xs font-bold text-white group-hover:underline truncate">Cybersecurity Essentials</h4>
+                <h4 class="text-xs font-bold text-neutral-900 dark:text-white group-hover:underline truncate">Cybersecurity Essentials</h4>
                 <p class="text-[10px] font-mono text-neutral-500">Cisco Academy</p>
               </div>
             </a>
 
-            <!-- Certificate of Completion / Competency (COC) -->
+            <!-- Certificate of Completion (COC) -->
             <a 
               href="assets/certifications/COC.png" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="group p-3 rounded-lg border border-neutral-900 bg-black/50 hover:border-neutral-700 transition flex items-center gap-3"
+              class="group p-3 rounded-lg border border-neutral-200 dark:border-neutral-900 bg-neutral-50/50 dark:bg-black/50 hover:border-neutral-400 dark:hover:border-neutral-700 transition flex items-center gap-3"
             >
-              <img src="assets/certifications/COC.png" alt="Certificate of Completion" class="w-10 h-10 object-contain rounded bg-neutral-900 p-1 shrink-0" />
+              <img src="assets/certifications/COC.png" alt="Certificate of Completion" class="w-10 h-10 object-contain rounded bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-1 shrink-0" />
               <div class="min-w-0">
-                <h4 class="text-xs font-bold text-white group-hover:underline truncate">Certificate of Completion</h4>
+                <h4 class="text-xs font-bold text-neutral-900 dark:text-white group-hover:underline truncate">Certificate of Completion</h4>
                 <p class="text-[10px] font-mono text-neutral-500">Technical Qualification</p>
               </div>
             </a>
@@ -297,15 +316,45 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="pt-8 border-t border-neutral-900 text-xs font-mono text-neutral-600 flex flex-col sm:flex-row justify-between items-center gap-4">
-      <p>© 2026 Dionivel A. Alegado. Built with Tailwind CSS.</p>
+    <footer class="pt-8 border-t border-neutral-200 dark:border-neutral-900 text-xs font-mono text-neutral-500 dark:text-neutral-600 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p>© 2026 Dionivel Adem Alegado. Built with Tailwind CSS.</p>
       <div class="flex gap-5">
-        <a href="https://github.com/Dnarxus" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">GitHub</a>
-        <a href="#me" class="hover:text-white transition">Back to Top ↑</a>
+        <a href="https://github.com/Dnarxus" target="_blank" rel="noopener noreferrer" class="hover:text-black dark:hover:text-white transition">GitHub</a>
+        <a href="#me" class="hover:text-black dark:hover:text-white transition">Back to Top ↑</a>
       </div>
     </footer>
 
   </main>
+
+  <!-- ================= THEME TOGGLE LOGIC SCRIPT ================= -->
+  <script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+    // Sync icons on load based on active theme
+    if (localStorage.getItem('color-theme') === 'light' || (!('color-theme' in localStorage) && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.remove('dark');
+      themeToggleDarkIcon.classList.remove('hidden');
+    } else {
+      document.documentElement.classList.add('dark');
+      themeToggleLightIcon.classList.remove('hidden');
+    }
+
+    // Toggle button handler
+    themeToggleBtn.addEventListener('click', () => {
+      themeToggleDarkIcon.classList.toggle('hidden');
+      themeToggleLightIcon.classList.toggle('hidden');
+
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+      }
+    });
+  </script>
 
 </body>
 </html>
