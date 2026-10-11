@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="dark scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dion | Computer Engineering & Software</title>
+  <title>Dion | Computer Engineering & Systems</title>
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   
   <script>
     tailwind.config = {
@@ -29,125 +29,191 @@
 </head>
 <body class="bg-black text-neutral-100 font-sans antialiased selection:bg-white selection:text-black min-h-screen">
 
-  <div class="max-w-3xl mx-auto px-6 py-20 space-y-20">
+  <!-- ================= TOP NAVIGATION BAR ================= -->
+  <nav class="sticky top-0 z-50 w-full border-b border-neutral-900 bg-black/75 backdrop-blur-md">
+    <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+      
+      <!-- Brand Logo / Identity -->
+      <a href="#home" class="font-mono text-sm font-semibold tracking-wider text-white hover:text-neutral-400 transition">
+        dion<span class="text-neutral-600">.dev</span>
+      </a>
 
-    <!-- Hero Section -->
-    <header class="space-y-6">
+      <!-- Desktop Nav Links -->
+      <div class="flex items-center gap-6 font-mono text-xs">
+        <a href="#home" class="text-neutral-400 hover:text-white transition">Home</a>
+        <a href="#about" class="text-neutral-400 hover:text-white transition">About</a>
+        <a href="#projects" class="text-neutral-400 hover:text-white transition">Projects</a>
+        <a href="#stack" class="text-neutral-400 hover:text-white transition">Stack</a>
+        <a href="#contact" class="px-3 py-1.5 rounded border border-neutral-700 text-white hover:border-white transition">
+          Contact
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="max-w-4xl mx-auto px-6 py-16 space-y-28">
+
+    <!-- HERO / HOME SECTION -->
+    <section id="home" class="scroll-mt-24 space-y-6 pt-4">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono border border-neutral-800 text-neutral-400 bg-neutral-950">
         <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-        Available for Projects & Engineering Roles
+        Available for Engineering & Software Roles
       </div>
       
-      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
-        Building offline-first systems, mobile software, and clean architectures.
+      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
+        Engineering offline-first software, custom data schemas, and mobile tools.
       </h1>
 
-      <p class="text-neutral-400 text-base sm:text-lg leading-relaxed">
-        Computer Engineering builder specializing in Flutter, local SQLite persistence, reactive interfaces, and cross-platform tools.
+      <p class="text-neutral-400 text-base sm:text-lg max-w-2xl leading-relaxed">
+        Computer Engineering student and builder focused on local persistence, reactive UI architecture, and robust cross-platform applications.
       </p>
 
-      <div class="flex flex-wrap gap-3 pt-2 font-mono text-sm">
-        <a href="#projects" class="px-4 py-2 bg-white text-black font-semibold rounded-md hover:bg-neutral-200 transition">
-          View Projects ↓
+      <div class="flex flex-wrap gap-4 pt-2 font-mono text-xs">
+        <a href="#projects" class="px-4 py-2 bg-white text-black font-semibold rounded hover:bg-neutral-200 transition">
+          Explore Projects ↓
         </a>
-        <a href="https://github.com/Dnarxus" target="_blank" rel="noopener noreferrer" class="px-4 py-2 border border-neutral-800 rounded-md hover:border-neutral-500 transition text-neutral-300">
-          GitHub ↗
-        </a>
-        <a href="mailto:your.email@example.com" class="px-4 py-2 border border-neutral-800 rounded-md hover:border-neutral-500 transition text-neutral-300">
-          Contact ↗
+        <a href="https://github.com/Dnarxus" target="_blank" rel="noopener noreferrer" class="px-4 py-2 border border-neutral-800 rounded text-neutral-300 hover:border-neutral-500 transition">
+          GitHub Profile ↗
         </a>
       </div>
-    </header>
+    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="space-y-6">
+    <!-- ABOUT SECTION -->
+    <section id="about" class="scroll-mt-24 space-y-6">
+      <div class="border-b border-neutral-900 pb-3">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-500">01 // Background</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-neutral-400 leading-relaxed">
+        <div class="md:col-span-2 space-y-4">
+          <p>
+            I focus on building resilient client-side systems that prioritize offline reliability, performance, and user privacy over cloud dependency.
+          </p>
+          <p>
+            My engineering work emphasizes clean database migrations, hierarchical data visualization, custom binary packing, and frictionless human-computer interaction.
+          </p>
+        </div>
+        <div class="p-4 rounded-lg border border-neutral-900 bg-neutral-950 font-mono text-xs space-y-2">
+          <p class="text-neutral-500 uppercase tracking-wider">Focus Areas</p>
+          <p class="text-white">· Mobile Systems (Flutter)</p>
+          <p class="text-white">· Local DBs (SQLite)</p>
+          <p class="text-white">· Structured Data Pipeling</p>
+          <p class="text-white">· Offline Architecture</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="scroll-mt-24 space-y-8">
       <div class="flex items-center justify-between border-b border-neutral-900 pb-3">
-        <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-500">Selected Work</h2>
-        <span class="text-xs font-mono text-neutral-600">2024 — Present</span>
+        <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-500">02 // Featured Works</h2>
+        <span class="text-xs font-mono text-neutral-600">Production & Releases</span>
       </div>
 
       <div class="space-y-6">
-        
-        <!-- Project 1: DoNWrite Ultra -->
-        <article class="p-6 bg-neutral-950 border border-neutral-900 rounded-xl hover:border-neutral-700 transition duration-200 space-y-4">
-          <div class="flex items-start justify-between gap-4">
+
+        <!-- Project: DoNWrite Ultra -->
+        <article class="p-6 sm:p-8 bg-neutral-950 border border-neutral-900 rounded-xl hover:border-neutral-700 transition duration-200 space-y-5">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
             <div>
-              <h3 class="text-lg font-bold text-white tracking-tight">DoNWrite Ultra</h3>
-              <p class="text-neutral-400 text-sm mt-1 leading-relaxed">
-                Offline-first studio and worldbuilding suite. Features customizable schema templates, SQLite persistence, timeline tracking, and formatted codex PDF publishing.
+              <div class="flex items-center gap-3">
+                <h3 class="text-xl font-bold text-white tracking-tight">DoNWrite Ultra</h3>
+                <span class="text-xs font-mono px-2 py-0.5 border border-neutral-800 text-neutral-400 rounded">
+                  v2.0
+                </span>
+              </div>
+              <p class="text-neutral-400 text-sm mt-2 leading-relaxed">
+                Offline-first studio and worldbuilding platform. Built with customizable dynamic schema templates, multi-stage hierarchy data fields, local SQLite indexing, and lore-compiled PDF export pipelines.
               </p>
             </div>
-            <span class="text-xs font-mono px-2 py-0.5 border border-neutral-800 text-neutral-400 rounded shrink-0">
-              v2.1.0
-            </span>
           </div>
 
-          <div class="flex flex-wrap gap-2 text-xs font-mono text-neutral-400 pt-2">
-            <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Flutter / Dart</span>
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-neutral-400">
+            <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Flutter</span>
+            <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Dart</span>
             <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">SQLite</span>
+            <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Local Persistence</span>
             <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Document Pipeline</span>
           </div>
 
-          <div class="pt-2 flex gap-4 text-xs font-mono">
+          <div class="pt-2 flex flex-wrap gap-4 text-xs font-mono border-t border-neutral-900">
             <a href="https://github.com/Dnarxus/donwrite_ultra" target="_blank" rel="noopener noreferrer" class="text-white hover:underline">
-              Source Code ↗
+              View Repository ↗
             </a>
             <a href="https://github.com/Dnarxus/donwrite_ultra/releases" target="_blank" rel="noopener noreferrer" class="text-neutral-400 hover:text-white transition">
-              Releases & APKs ↗
+              Download Releases (APKs) ↗
             </a>
           </div>
         </article>
 
-        <!-- Project 2 (Future / System Tool Placeholder) -->
-        <article class="p-6 bg-neutral-950 border border-neutral-900 rounded-xl hover:border-neutral-700 transition duration-200 space-y-4">
-          <div class="flex items-start justify-between gap-4">
+        <!-- Project 2 Placeholder -->
+        <article class="p-6 sm:p-8 bg-neutral-950 border border-neutral-900 rounded-xl hover:border-neutral-700 transition duration-200 space-y-5">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
             <div>
-              <h3 class="text-lg font-bold text-white tracking-tight">System Tool / Utility</h3>
-              <p class="text-neutral-400 text-sm mt-1 leading-relaxed">
-                Custom pipeline automation for structured data extraction, archiving, and local device benchmarking.
+              <div class="flex items-center gap-3">
+                <h3 class="text-xl font-bold text-white tracking-tight">Binary Backup & Compression Utility</h3>
+                <span class="text-xs font-mono px-2 py-0.5 border border-neutral-800 text-neutral-400 rounded">
+                  Internal Utility
+                </span>
+              </div>
+              <p class="text-neutral-400 text-sm mt-2 leading-relaxed">
+                Custom packaging and verification pipeline designed for structured device backups, schema serialization, and single-file archiving.
               </p>
             </div>
-            <span class="text-xs font-mono px-2 py-0.5 border border-neutral-800 text-neutral-400 rounded shrink-0">
-              Open Source
-            </span>
           </div>
 
-          <div class="flex flex-wrap gap-2 text-xs font-mono text-neutral-400 pt-2">
-            <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Python</span>
-            <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Automation</span>
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-neutral-400">
+            <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Python / Dart</span>
+            <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">File I/O</span>
+            <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Packaging</span>
           </div>
         </article>
 
       </div>
     </section>
 
-    <!-- Technical Stack Section -->
-    <section class="space-y-4">
-      <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-500 border-b border-neutral-900 pb-3">
-        Technical Capabilities
-      </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-        <div class="p-4 border border-neutral-900 rounded-lg bg-neutral-950/60">
-          <p class="text-xs font-mono text-neutral-500 mb-2">PLATFORMS & LANGUAGES</p>
-          <p class="text-neutral-300">Flutter, Dart, Python, C/C++, SQLite, HTML5/Tailwind</p>
+    <!-- TECHNICAL STACK SECTION -->
+    <section id="stack" class="scroll-mt-24 space-y-6">
+      <div class="border-b border-neutral-900 pb-3">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-500">03 // Technical Stack</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-mono">
+        <div class="p-5 border border-neutral-900 rounded-lg bg-neutral-950/60 space-y-2">
+          <p class="text-xs text-neutral-500 uppercase">Languages & Core Tools</p>
+          <p class="text-neutral-200">Flutter, Dart, Python, C/C++, HTML5/Tailwind</p>
         </div>
-        <div class="p-4 border border-neutral-900 rounded-lg bg-neutral-950/60">
-          <p class="text-xs font-mono text-neutral-500 mb-2">SYSTEMS & WORKFLOWS</p>
-          <p class="text-neutral-300">Offline-first caching, binary packaging, schema migrations, Git CI/CD</p>
+        <div class="p-5 border border-neutral-900 rounded-lg bg-neutral-950/60 space-y-2">
+          <p class="text-xs text-neutral-500 uppercase">Architecture & Storage</p>
+          <p class="text-neutral-200">SQLite, Schema Versioning, State Management, Git CI/CD</p>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="pt-8 border-t border-neutral-900 text-xs font-mono text-neutral-500 flex flex-col sm:flex-row justify-between gap-4">
-      <p>© 2026 Dion. Built with Tailwind CSS.</p>
-      <div class="flex gap-4">
-        <a href="https://github.com/Dnarxus" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">GitHub</a>
-        <a href="mailto:your.email@example.com" class="hover:text-white transition">Email</a>
+    <!-- CONTACT / FOOTER SECTION -->
+    <section id="contact" class="scroll-mt-24 pt-8 border-t border-neutral-900 space-y-6">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div>
+          <h2 class="text-xl font-bold text-white tracking-tight">Initiate Contact</h2>
+          <p class="text-neutral-400 text-sm mt-1">Open for discussions on software architecture and opportunities.</p>
+        </div>
+        <a href="mailto:your.email@example.com" class="px-5 py-2.5 bg-white text-black font-semibold text-xs font-mono rounded hover:bg-neutral-200 transition">
+          Send Email ↗
+        </a>
       </div>
-    </footer>
 
-  </div>
+      <footer class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs font-mono text-neutral-600 gap-4">
+        <p>© 2026 Dion. Built with Tailwind CSS.</p>
+        <div class="flex gap-4">
+          <a href="https://github.com/Dnarxus" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">GitHub</a>
+          <a href="#home" class="hover:text-white transition">Back to Top ↑</a>
+        </div>
+      </footer>
+    </section>
+
+  </main>
 
 </body>
 </html>
